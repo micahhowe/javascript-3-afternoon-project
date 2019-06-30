@@ -57,13 +57,8 @@ function greeting( obj ) {
 
 //Code Here
 
-let totalPopulation = (obj) => {
-  // {utah,california,texas,arizona} = obj;
-  //I'm not sure why the line above doesn't work but the line(s) below do
-  let utah = obj.utah
-  let california = obj.california
-  let texas = obj.texas
-  let arizona = obj.arizona
+let totalPopulation = ({utah,california,texas,arizona}) => {
+  
 return utah + california + texas + arizona }
 
 
@@ -77,17 +72,16 @@ return utah + california + texas + arizona }
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
-let finalFood = []
-debugger;
+let q = []
 let ingredients = (obj) => {
-  let carb = obj.carb
-  let fat = obj.fat
-  let protein = obj.protein
-  finalFood.push(carb,fat,protein)
-  return finalFood
+  let carb = obj.carb;
+  let fat = obj.fat;
+  let protein = obj.protein;
+  q.push(fat,carb,protein);
+  console.log('fats are' + fat)
+  return q;
 }
-console.log(finalFood)
+//the issue with my code is that there are multiple of each key value pair and in one case it is returning all 6 instead of just 3.
 
 
 ////////// PROBLEM 5 //////////
@@ -105,8 +99,13 @@ console.log(finalFood)
 */
 
 //Code Here
-
-
+let arr4 = []
+let largeNumbers = ({first,second,third}) => {
+  arr4.push(first,second,third);
+  arr4.sort((a,b) => a-b);
+  let num = arr4[0];
+  return num;
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -117,5 +116,15 @@ console.log(finalFood)
 */
 
 //Code Here
-
+let numberGroups = ({a,b,c}) => {
+  if (a.length > b.length && a.length > c.length) {
+      return a
+  }
+  else if (b.length > c.length && b.length > a.length){
+    return b
+  }
+  else {
+    return c
+  }
+}
 
