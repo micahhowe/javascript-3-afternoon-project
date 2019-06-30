@@ -57,6 +57,14 @@ function greeting( obj ) {
 
 //Code Here
 
+let totalPopulation = (obj) => {
+  // {utah,california,texas,arizona} = obj;
+  //I'm not sure why the line above doesn't work but the line(s) below do
+  let utah = obj.utah
+  let california = obj.california
+  let texas = obj.texas
+  let arizona = obj.arizona
+return utah + california + texas + arizona }
 
 
 ////////// PROBLEM 4 //////////
@@ -70,7 +78,16 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+let finalFood = []
+debugger;
+let ingredients = (obj) => {
+  let carb = obj.carb
+  let fat = obj.fat
+  let protein = obj.protein
+  finalFood.push(carb,fat,protein)
+  return finalFood
+}
+console.log(finalFood)
 
 
 ////////// PROBLEM 5 //////////
