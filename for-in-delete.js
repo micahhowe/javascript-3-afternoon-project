@@ -76,7 +76,12 @@ function greaterThan10(obj){
 */
 
 //Code Here
-
+let double = (obj) => {
+  for(let key in obj) {
+    obj[key] = obj[key] * 2
+  }
+  return obj
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -90,7 +95,15 @@ function greaterThan10(obj){
 */
 
 //Code Here
-
+let secrets = (obj) => {
+  let emptyStr = ''
+  for(let key in obj) {
+    if (key[0] == 's' && key[1] == 'h') {
+      emptyStr += obj[key]
+    }
+  }
+  return emptyStr
+}
 
 
 /* 
