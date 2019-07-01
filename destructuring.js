@@ -72,16 +72,19 @@ return utah + california + texas + arizona }
   Push these new variables to an array and return the array. 
 */
 
-let q = []
-let ingredients = (obj) => {
-  let carb = obj.carb;
-  let fat = obj.fat;
-  let protein = obj.protein;
+
+const ingredients = (obj) => {
+  console.log('id',obj)
+  let q = []
+  const {carb} = obj;
+  const {fat} = obj;
+  const {protein} = obj;
   q.push(fat,carb,protein);
-  console.log('fats are' + fat)
+  console.log('fats are'+ " " + fat)
   return q;
 }
-//the issue with my code is that there are multiple of each key value pair and in one case it is returning all 6 instead of just 3.
+
+//the issue with this problem is that there are multiple of each key value pair and in one case it is returning all 6 instead of just 3.
 
 
 ////////// PROBLEM 5 //////////

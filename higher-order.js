@@ -145,12 +145,16 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 let h = 0;
 let bobsTotal = purchases.reduce(function(acc,el,i,arr){
+  
   if(el.owner == "Bob"){
   h += el.price
 }
+
   //return acc + el.price
+
   return h
 },0)
+console.log(bobsTotal)
 //I was having major issues with this one. I feel like I didn't even end up using reduce just a manual addition principle.
 
 
