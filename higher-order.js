@@ -143,18 +143,21 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 /*
   Use a high order method to create to get the sum of bobsTotal.
 */
-let h = 0;
-let bobsTotal = purchases.reduce(function(acc,el,i,arr){
+// let h = 0;
+// let bobsTotal = purchases.reduce(function(acc,el,i,arr){
   
-  if(el.owner == "Bob"){
-  h += el.price
-}
+//   if(el.owner == "Bob"){
+//   h += el.price
+// }
 
-  //return acc + el.price
+//   //return acc + el.price
 
-  return h
-},0)
-console.log(bobsTotal)
-//I was having major issues with this one. I feel like I didn't even end up using reduce just a manual addition principle.
+//   return h
+// },0)
+// console.log(bobsTotal)
+//^^^^ I was having major issues with this one. I feel like I didn't even end up using reduce just a manual addition principle.
+let bobsTotal = purchases.filter( element => element.owner === 'Bob').reduce( (acc, element) => acc + element.price,0)
+// This was provided by Sam and runs a filter to target the correct element and then runs the reduce method at that point
+
 
 
